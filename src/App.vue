@@ -1,14 +1,17 @@
 <template>  
   <Heroes />
+  <Footer />
 </template>
 
 <script>
   import Heroes from './components/Heroes.vue'
+  import Footer from './components/Footer.vue'
 
   export default {
     name: 'App',
     components: {
-      Heroes
+      Heroes,
+      Footer
     }
   }
 </script>
@@ -18,5 +21,6 @@
 
   #app {
     font-family: $font;
+    background-color: $black;
   }
 </style>

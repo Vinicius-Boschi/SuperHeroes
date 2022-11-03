@@ -1,33 +1,36 @@
 <template>
     <div class="container" id="home">
+        <Search 
+            :apiUrl="apiUrl"
+            @setHeroesUrl="setHeroesUrl"
+        />
         <List
-            :imageUrl="imageUrl"
             :apiUrl="apiUrl"
             @setHeroesUrl="setHeroesUrl"
         />
         <Modal 
-            v-if="showModal"
-            :imageUrl="imageUrl"
-            :heroesUrl="heroesUrl"
+            v-if="showModal" 
+            :apiUrl="apiUrl"
             @closeModal="closeModal"
         />
     </div>
 </template>
 
 <script>
+    import Search from './Search.vue'
     import List from './ListHeroes.vue'
     import Modal from './ModalHeroes.vue'   
 
     export default {
         name: 'Heroes',
         components: {
+            Search,
             List,
             Modal
         },
         data() {
             return {
-                imageUrl: '',
-                apiUrl: `https://gateway.marvel.com/v1/public/characters?ts=1667235187378&apikey=176701f1c86ddc91378ff7d420752043&hash=6bf268a166c762eed06299c83acea443`,
+                apiUrl: 'https://akabab.github.io/superhero-api/api',
                 heroesUrl: '',
                 showModal: false
             }
