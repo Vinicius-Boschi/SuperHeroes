@@ -17,7 +17,7 @@
 </script>
 
 <style lang="scss">
-  @import "./assets/variable.scss";
+  @import "./assets/scss/variable.scss";
 
   #app {
     font-family: $font;

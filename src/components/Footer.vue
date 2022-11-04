@@ -16,27 +16,6 @@
 </script>
 
 <style lang="scss">
-    @import '../assets/variable.scss';
-
-    .footer {
-        background-color: $gray;
-        margin-top: 1rem;
-        height: 10rem;
-
-        &__content {
-            padding: 2rem;
-            line-height: 2;
-            color: $white;
-        }
-
-        &__logo {
-            width: 3rem;
-        }
-
-        a {
-            text-decoration: none;
-            color: $blue;
-        }
-    }
-
+    @import '../assets/scss/variable.scss';
+    @import "../assets/scss/styles/footer.scss";
 </style>

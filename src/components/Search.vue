@@ -42,35 +42,6 @@
 </script>
 
 <style lang="scss">
-    @import '../assets/variable.scss';
-
-    form {
-        display: flex;
-        justify-content: center;
-        
-        input, button {
-            margin-top: 1rem;
-            border: none;
-            color: $white;
-        }
-
-        input {
-            width: 26rem;
-            height: 2.75rem;
-            text-align: center;
-            border-radius: 50px;
-            background: $gray;
-
-            &::placeholder {
-                color: $white;
-            }
-        }
-
-        button {
-            margin-left: 1rem;
-            background: none;
-            font-size: 15px;
-        }
-    }
-
+    @import '../assets/scss/variable.scss';
+    @import '../assets/scss/styles/search.scss';
 </style>

@@ -1,0 +1,126 @@
+.detail {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 65px 10px 10px;
+    width: 100%;
+    height: 100vh;
+    background: $black-two;    
+    overflow: scroll;
+
+    &__view {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        width: 100%;
+        height: 65vw;
+        max-width: 510px;   
+        background-color: $white-three;
+        border-radius: 5px;
+        box-shadow: 0 15px 30px $black, 0 10px 10px $black;   
+    }
+
+    &__image {
+        margin-top: -6rem;
+        width: 120px;
+        align-self: center;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    &__card {
+        padding: 1rem;
+
+        &-fullName {
+            font-size: 13px;
+            line-height: 1.5;
+        }
+
+        &-name {
+            font-size: 40px;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+    }
+
+    &__lists {
+        display: flex;
+        justify-content: center;
+    }
+
+    &__list {
+        display: flex;
+        line-height: 2;
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem;
+    }
+
+    &__ul {
+        margin-bottom: 1rem;
+    }
+
+    &__title {
+        font-size: 18px;
+        font-weight: bold;
+        margin-bottom: 1rem;
+        margin-top: 1rem;
+    }
+
+    &__powerlist {
+        display: flex;
+        align-items: center;
+        padding: .3rem;
+
+        p {
+            margin-left: .3rem;
+            flex: 0 0 25%;
+        }
+
+        &.break {
+            flex-wrap: wrap;
+            line-height: 1.5;
+        }
+
+        &__break {
+            flex: 0 0 25%;
+        }
+    }
+
+    &__bars {
+        padding: .1em 16px;
+        margin-left: 10px;
+        font-size: .75rem;
+        background-color: $white-two;
+        border-radius: 0.25rem;
+        color: $black;
+    }
+
+    &__aliase {
+        margin-right: 10px;
+    }
+
+    &__error {
+        color: $white;
+        font-size: 1.5rem;
+        font-weight: 600;
+        text-align: center;
+        margin-top: 2rem;
+    }
+
+    &__close {
+        align-self: center;
+        border: none;
+        padding: .5rem;
+        width: 25%;
+        background-color: $black;
+        color: $white;
+        border-radius: 10px;
+        cursor: pointer;
+    }
+}
