@@ -30,7 +30,7 @@
         },
         data() {
             return {
-                apiUrl: 'https://akabab.github.io/superhero-api/api',
+                apiUrl: 'https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/',
                 heroesUrl: '',
                 showModal: false
             }

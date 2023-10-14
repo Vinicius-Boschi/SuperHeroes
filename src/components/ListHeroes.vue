@@ -7,7 +7,7 @@
         </div>
         <ul>
             <li class="list__li" v-for="(heroe, index) in heroes" :key="index" @click="setHeroesUrl(heroe.url)">
-                <img class="list__image" :src="heroe.images.sm" :alt="heroe.name" :data-id='heroe.id'>
+                <img class="list__image" id="image" :src="heroe.images.sm" :alt="heroe.name" :data-id='heroe.id'>
                 <h3 class="list__title">{{ heroe.name }}</h3>
             </li>
         </ul>
@@ -24,7 +24,7 @@
             return {
                 heroes: [],
                 currentUrl: "",
-                complementUrl: "/all.json"
+                complementUrl: "all.json"
             }
         },
         methods: {

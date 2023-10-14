@@ -1,50 +1,132 @@
 .detail {
     display: flex;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
     position: fixed;
     top: 0;
     left: 0;
-    padding: 65px 10px 10px;
+    padding: 20px 10px 10px;
     width: 100%;
-    height: 100vh;
+    height: 100%;
     background: $black-two;    
+    color: $white;
     overflow: scroll;
+
+    @include phone {
+        flex-wrap: wrap;
+    }
+
+    @include tablet {
+        flex-wrap: wrap;
+    }
 
     &__view {
         display: flex;
-        justify-content: center;
-        flex-direction: column;
-        width: 100%;
-        height: 65vw;
-        max-width: 510px;   
-        background-color: $white-three;
+        width: 80%;
+        background-color: $black-three;
         border-radius: 5px;
-        box-shadow: 0 15px 30px $black, 0 10px 10px $black;   
-    }
+        box-shadow: 0 15px 30px #0d1117, 0 10px 10px #0d1117;
 
-    &__image {
-        margin-top: -6rem;
-        width: 120px;
-        align-self: center;
+        @include phone {
+            flex-direction: column;
+            width: 100%;
+        }
 
-        img {
+        @include tablet {
+            flex-direction: column;
             width: 100%;
         }
     }
 
-    &__card {
-        padding: 1rem;
+    &__image {
+        width: 100%;
+        border-radius: 1rem;
+        overflow: hidden;
+        max-width: 360px;
+        display: flex;
+        align-items: center;
+        padding: 2rem;
 
-        &-fullName {
-            font-size: 13px;
-            line-height: 1.5;
+        @include phone {
+            max-width: 360px;
+            margin: 0 auto;
         }
 
-        &-name {
-            font-size: 40px;
-            font-weight: bold;
-            margin-bottom: 1rem;
+        @include tablet {
+            max-width: 360px;
+            margin: 0 auto;
+        }
+
+        img {
+            width: 100%;
+            display: block;
+        }
+    }
+
+    &__fullName {
+        font-size: 15px;
+        line-height: 1.5;
+    }
+
+    &__name {
+        font-size: 35px;
+        font-weight: bold;
+        margin-bottom: 1rem;
+    }
+
+    &__btns {
+        margin-bottom: 2rem;
+    }
+
+    &__tab {
+        background: none;
+        border: none;
+        font-size: 20px;
+        text-transform: uppercase;
+        cursor: pointer;
+        color: inherit;
+        margin: 1rem 1rem 0 0;
+        
+        &.active {
+            border-bottom: 4px solid $orange;
+        }
+    }
+
+    &__ul {
+        display: none;
+
+        &.active {
+            display: block;
+        }
+    }
+
+    &__card {
+        padding: 2rem;
+        width: 100%;
+
+        @include phone {
+            width: auto;
+        }
+
+        @include tablet {
+            width: auto;
+        }
+    }
+
+    &__about {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__close {
+        align-self: center;
+        border: none;
+        background: none;
+        color: $white;
+        cursor: pointer;
+
+        i {
+            font-size: 2rem;
         }
     }
 
@@ -61,10 +143,6 @@
         padding: 1rem;
     }
 
-    &__ul {
-        margin-bottom: 1rem;
-    }
-
     &__title {
         font-size: 18px;
         font-weight: bold;
@@ -72,37 +150,73 @@
         margin-top: 1rem;
     }
 
-    &__powerlist {
+    &__infos {
         display: flex;
-        align-items: center;
-        padding: .3rem;
+        justify-content: space-between;
+        margin: .5rem auto;
+        padding: 1.5rem;
+        box-shadow: 0 5px 7px 0 rgba(0, 0, 0, 0.5);
 
-        p {
-            margin-left: .3rem;
-            flex: 0 0 25%;
+        &.bio {
+            justify-content: inherit;
+
+            span {
+                padding: 0 1rem;
+            }
         }
 
-        &.break {
-            flex-wrap: wrap;
-            line-height: 1.5;
-        }
+        &.conect {
+            flex-direction: column;
 
-        &__break {
-            flex: 0 0 25%;
+            span {
+                line-height: 1.8;
+            }
         }
+    }
+
+    &__info_name {
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        border-radius: 7px;
+        padding: 0 1rem;
+        opacity: .6;
+        font-size: 1rem;
     }
 
     &__bars {
-        padding: .1em 16px;
-        margin-left: 10px;
-        font-size: .75rem;
-        background-color: $white-two;
-        border-radius: 0.25rem;
-        color: $black;
+        font-weight: 700;
+        color: $orange;
     }
 
-    &__aliase {
-        margin-right: 10px;
+    &__appearance {
+        font-weight: 600; 
+        background-color: #f64445; 
+        border-radius: 2rem; 
+        padding: 0.4rem;
+    }
+
+    &__connections {
+        display: block;
+        text-transform: uppercase;
+        color: $gray-two;
+        margin: 1rem 0 1rem 2rem;
+        position: relative;
+        font-weight: 700;
+        font-size: 1.5rem;
+        letter-spacing: 2px;
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            -webkit-transform: translateY(-50%);
+            -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+            left: -40px;
+            height: 3px;
+            width: 30px;
+            background-color: $orange;
+        }
     }
 
     &__error {
@@ -111,16 +225,5 @@
         font-weight: 600;
         text-align: center;
         margin-top: 2rem;
-    }
-
-    &__close {
-        align-self: center;
-        border: none;
-        padding: .5rem;
-        width: 25%;
-        background-color: $black;
-        color: $white;
-        border-radius: 10px;
-        cursor: pointer;
     }
 }

@@ -1,13 +1,16 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
 
-$font: 'Roboto Condensed', sans-serif;
+$font: 'Poppins', sans-serif;
 $white: #FFFFFF;
 $white-two: #FFFFFF82;
 $white-three: #B8B7B7;
 $gray: #4447589C;
+$gray-two: #505050;
 $black: #0D1117;
-$black-two: #0D111779;
+$black-two: #0d1117b5;
+$black-three: #0D0F10;
 $blue: #0077F2;
+$orange: #FF8C00;
 
 @mixin phone {
     @media (min-width: 375px) and (max-width: 540px) { @content; }
